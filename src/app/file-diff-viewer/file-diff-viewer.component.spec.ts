@@ -6,7 +6,7 @@ import { FileDiffViewerComponent } from './file-diff-viewer.component';
 import { FileModel } from '../+shared/models/file.model';
 
 @Component({
-  selector: 'test-host-component',
+  selector: 'app-test-host-component',
   template: `<app-file-diff-viewer [firstFile]="firstFile" [secondFile]="secondFile"></app-file-diff-viewer>`
 })
 class TestHostComponent {
@@ -16,7 +16,6 @@ class TestHostComponent {
 
 describe('FileDiffViewerComponent', () => {
   let fixture: ComponentFixture<TestHostComponent>;
-  let component: TestHostComponent;
   let fileDiffViewerComponent: FileDiffViewerComponent;
 
   beforeEach(async () => {
@@ -28,7 +27,6 @@ describe('FileDiffViewerComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TestHostComponent);
-    component = fixture.componentInstance;
     fileDiffViewerComponent = fixture.debugElement.children[0].componentInstance as FileDiffViewerComponent;
     fixture.detectChanges();
   });

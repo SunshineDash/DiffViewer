@@ -7,7 +7,7 @@ export class FileDiffHelper {
 
     for (const part of diff) {
       const backgroundColor = part.added ? '#59CE8F' :
-        part.removed ? '#FF0032' : 'none';
+        part.removed ? '#FF6969' : 'none';
       const span = this.createSpanElement(part.value, backgroundColor);
 
       if (part.added) {

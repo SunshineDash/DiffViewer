@@ -55,7 +55,7 @@ describe('FileDiffHelper', () => {
       expect(firstDisplay.children[0].textContent).toBe('unchanged text');
       expect(firstDisplay.children[0].computedStyleMap().get('background-color')?.toString()).toBe('rgba(0, 0, 0, 0)');
       expect(firstDisplay.children[1].textContent).toBe('removed text');
-      expect(firstDisplay.children[1].computedStyleMap().get('background-color')?.toString()).toBe('rgb(255, 0, 50)');
+      expect(firstDisplay.children[1].computedStyleMap().get('background-color')?.toString()).toBe('rgb(255, 105, 105)');
 
       expect(secondDisplay.children.length).toBe(2);
       expect(secondDisplay.children[0].textContent).toBe('unchanged text');

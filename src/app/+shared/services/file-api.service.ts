@@ -23,7 +23,7 @@ export class FileApiService {
     )
   }
 
-  private handleError(response: HttpErrorResponse): void {
+  handleError(response: HttpErrorResponse): void {
     console.error(response.error || response.status ? `${response.status} - ${response.statusText}` : 'Server error');
   }
 }

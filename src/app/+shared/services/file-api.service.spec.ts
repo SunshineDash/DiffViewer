@@ -41,7 +41,6 @@ describe('FileApiService', () => {
 
     it('should handle HTTP error', () => {
       const errorMessage = '404 error';
-      const spy = spyOn(service as any, 'handleError').and.callThrough();
 
       service.getFile(fileId).subscribe({
         error: (error) => {
@@ -51,9 +50,9 @@ describe('FileApiService', () => {
       });
 
       const req = httpMock.expectOne(fileId);
+      expect(req.request.method).toBe('GET');
+      expect(req.request.headers.get('Content-Type')).toBe('text/xml');
       req.flush(errorMessage, { status: 404, statusText: 'Not Found' });
-
-      expect(spy).toHaveBeenCalledWith(jasmine.any(HttpErrorResponse as any) as any);
     });
   });
 
@@ -68,7 +67,7 @@ describe('FileApiService', () => {
 
       service['handleError'](mockErrorResponse);
 
-      expect(consoleSpy).toHaveBeenCalledWith('404 - Not Found' as any);
+      expect(consoleSpy).toHaveBeenCalledWith('404 - Not Found');
     });
   });
 });
