@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pluginConfigurations exportVersion="5.12.0-SNAPSHOT-23525">
+    <pluginConfiguration name="F.UsageHistory.ACC" pluginIdentifier="UsageHistory">
+        <genericProperties/>
+        <info leftPanelWidth="250" objectClass="com.meylemueller.obj.isy.ISYPrePressDocumentObjectEntity"
+              rightPanelWidth="250" searchJavascript="" searchJavascriptEnabled="false">
+            <pluginConfiguration name="C.FSDetail.ACC.MAM.Right" objectClass="com.meylemueller.obj.isy.ISYObjectEntity"
+                                 pluginIdentifier="FSDetail">
+                <genericProperties>
+                    <genericValue stringValue="false" identifier="Title"/>
+                    <genericValue booleanValue="false" identifier="ShowControlsToManageOfSaving"/>
+                </genericProperties>
+            </pluginConfiguration>
+            <contentView default="true" name="C.FSTable.ACC.MAM" orderNumber="0" position="RIGHT"
+                         showContainers="true" showLanguageBar="true">
+                <allowedFunctions>
+                    <function groupName="Up/Downloads" name="" orderNumber="0" position="TOOLBAR">
+                        <function groupName="" name="F.DirectDownload.ACC" orderNumber="1" position="TOOLBAR"/>
+                        <function groupName="" name="F.DirectDownload.ACC.Document" orderNumber="2" position="TOOLBAR"/>
+                    </function>
+                    <function groupName="Previews" name="" orderNumber="3" position="TOOLBAR">
+                        <function groupName="" name="COARSE" orderNumber="4" position="TOOLBAR"/>
+                        <function groupName="" name="ORIGINAL" orderNumber="5" position="TOOLBAR"/>
+                    </function>
+                    <function groupName="" name="F.ShowInNavigation.ACC" orderNumber="6" position="TOOLBAR"/>
+                </allowedFunctions>
+                <pluginConfiguration name="C.FSTable.ACC.MAM" pluginIdentifier="FSTable"/>
+            </contentView>
+            <contentView default="true" name="C.SingleObject.ACC.MAM" orderNumber="1" position="CENTER"
+                         showContainers="true" showLanguageBar="true">
+                <allowedFunctions>
+                    <function groupName="Up/Downloads" name="" orderNumber="0" position="TOOLBAR">
+                        <function groupName="" name="F.DirectDownload.ACC" orderNumber="1" position="TOOLBAR"/>
+                        <function groupName="" name="F.DirectDownload.ACC.CheckOut" orderNumber="2" position="TOOLBAR"/>
+                    </function>
+                </allowedFunctions>
+            </contentView>
+        </info>
+    </pluginConfiguration>
+</pluginConfigurations>
